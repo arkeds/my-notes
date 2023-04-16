@@ -6,7 +6,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import useNotesStore from "../../store/useNotesStore";
 
 const NotesList: FC = () => {
-  const { notes } = useNotesStore();
+  const { notes, deleteNote } = useNotesStore();
   return (
     <Grid
       container
@@ -29,7 +29,11 @@ const NotesList: FC = () => {
               <IconButton color="warning" component="label">
                 <EditIcon />
               </IconButton>
-              <IconButton color="error" component="label">
+              <IconButton
+                color="error"
+                component="label"
+                onClick={() => deleteNote(n.id)}
+              >
                 <DeleteIcon />
               </IconButton>
             </div>

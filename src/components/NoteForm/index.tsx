@@ -39,6 +39,7 @@ const NoteForm = () => {
         }}
         variant="contained"
         type="submit"
+        disabled={note === ""}
       >
         Save
       </Button>
