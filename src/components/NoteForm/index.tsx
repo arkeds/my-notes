@@ -22,29 +22,27 @@ const NoteForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={(e) => onSubmitNote(e)}>
-        <TextField
-          label="Note"
-          multiline
-          rows={4}
-          value={note}
-          fullWidth
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setNote(e.target.value)
-          }
-        />
-        <Button
-          sx={{
-            margin: "1rem 0",
-          }}
-          variant="contained"
-          type="submit"
-        >
-          Save
-        </Button>
-      </form>
-    </div>
+    <form onSubmit={(e) => onSubmitNote(e)}>
+      <TextField
+        label="Note"
+        multiline
+        rows={4}
+        value={note}
+        fullWidth
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setNote(e.target.value)
+        }
+      />
+      <Button
+        sx={{
+          margin: "1rem 0",
+        }}
+        variant="contained"
+        type="submit"
+      >
+        Save
+      </Button>
+    </form>
   );
 };
 
