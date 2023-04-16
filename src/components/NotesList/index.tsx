@@ -26,9 +26,6 @@ const NotesList: FC = () => {
           >
             <p>{n.text}</p>
             <div>
-              <IconButton color="warning" component="label">
-                <EditIcon />
-              </IconButton>
               <IconButton
                 color="error"
                 component="label"
